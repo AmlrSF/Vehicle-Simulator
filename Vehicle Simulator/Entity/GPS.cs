@@ -4,21 +4,16 @@ namespace Vehicle_Simulator.Entity
 {
     internal class GPS
     {
-        public double X { get; private set; }
-        public double Y { get; private set; }
-        public DateTime Timestamp { get; private set; }
+        private int id;
+        private int x;
+        private int y;
+        private DateTime timestamp;
 
-        private static Random random = new Random();
+        Random random = new Random();
 
-   
-    
-        public (double X, double Y, DateTime Timestamp) GenerateCoordinates()
-        {
-            X = random.NextDouble() * 100; 
-            Y = random.NextDouble() * 100;
-            Timestamp = DateTime.UtcNow;
-
-            return (X, Y, Timestamp);
-        }
+        public int Id { get => id; set => id = value; }
+        public int X { get => random.Next(10, 100); }
+        public int Y { get => random.Next(10, 100); }
+        public DateTime Timestamp { get => DateTime.Now; }
     }
 }

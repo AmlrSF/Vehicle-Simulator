@@ -41,10 +41,13 @@ namespace Vehicle_Simulator.Business
         {
             while (true)
             {
-                double x = random.NextDouble() * 100;
-                double y = random.NextDouble() * 100;
-                DateTime timestamp = DateTime.UtcNow;
-
+                GPS p = new GPS();
+                
+                double x = p.GenerateRandomX();
+                double  y = p.GenerateRandomY();
+                DateTime timestamp = p.Timestamp;
+                
+                
 
                 VehiclePositionDTO vehiclePosition = new VehiclePositionDTO(v.Id, x, y, timestamp);
 

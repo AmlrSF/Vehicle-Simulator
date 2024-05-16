@@ -11,7 +11,8 @@ class Program
     static void Main(string[] args)
     {
         
-        string connectionString = "server=localhost;user=root;database=VehicleSimu;port=3306;password=";
+        string connectionString 
+            = "server=localhost;port=3306;user=root;database=vehiclesimu;Uid=root;";
 
 
         

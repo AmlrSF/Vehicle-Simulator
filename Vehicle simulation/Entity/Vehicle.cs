@@ -12,14 +12,14 @@ namespace Vehicle_Simulator.Entity
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public GPS Gps { get; set; }
+        //public GPS Gps { get; set; }
 
         public Vehicle(int id, string name)
         {
             Id = id;
             Name = name;
 
-            Gps = new GPS();
+            //Gps = new GPS();
             
         }
 
